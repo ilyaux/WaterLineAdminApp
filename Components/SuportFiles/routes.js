@@ -1,0 +1,8 @@
+export const LOGINPAGE = "LOGINPAGE"
+export const HOMEPAGE = "HOMEPAGE"
+export const CREATEPAGE = "CREATEPAGE"
+export const MAPPAGE = "MAPPAGE"
+export const VIEWFACTORY = "VIEWFACTORY"
+export const CREATEFACROTY = "CREATEFACROTY"
+export const VIEWPOINTS = "VIEWPOINTS"
+export const DRIVERSPAGE = "DRIVERSPAGE"

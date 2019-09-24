@@ -1,0 +1,186 @@
+// silenceSetName = async () => {
+  //   cname = this.state.CName;
+  //   if (cname !== "") {
+  //     let cdata = this.state.cdata;
+
+  //     let pdata = cdata.find(el1 => el1.name === cname);
+
+  //     if (pdata !== undefined) {
+  //       let res = Object.values(pdata);
+
+  //       if (res !== null) {
+  //         let cp = res[1];
+  //         this.setState({
+  //           currentcp: cp
+  //         });
+  //         await firebase
+  //           .database()
+  //           .ref("/Countries/" + cp + "/points/")
+  //           .once("value", data => {
+  //             if (data.exists()) {
+  //               var pv = Object.values(data.val());
+  //               this.setState({
+  //                 pdata: pv
+  //               });
+  //             } else {
+  //               this.setState({
+  //                 pdata: null
+  //               });
+  //             }
+  //           });
+  //       } else {
+  //         this.setState({
+  //           pdata: null,
+  //           zpdata: null,
+  //           ltlng: null
+  //         });
+  //       }
+  //     } else {
+  //       await firebase
+  //         .database()
+  //         .ref("/Countries/")
+  //         .once("value", data => {
+  //           if (data.exists()) {
+  //             var pv = Object.values(data.val());
+  //             this.setState({
+  //               currentcp: pv.length
+  //             });
+  //             console.log(pv.length);
+  //           } else {
+  //             this.setState({
+  //               currentcp: 0
+  //             });
+  //           }
+  //         });
+  //     }
+
+  //     YellowBox.ignoreWarnings(["Setting a timer"]);
+  //     const _console = _.clone(console);
+  //     console.warn = message => {
+  //       if (message.indexOf("Setting a timer") <= -1) {
+  //         _console.warn(message);
+  //       }
+  //     };
+  //   } else {
+  //     this.setState({
+  //       pdata: null,
+  //       zpdata: null,
+  //       ltlng: null
+  //     });
+  //   }
+  // };
+
+  // silencesetZPName = async () => {
+  //   let zpname = this.state.PName;
+  //   let pd = this.state.pdata;
+  //   let zpdata = pd.find(el1 => el1.name === zpname);
+  //   cosnole.log(" GET ZDATA ")
+  //   if (zpdata !== undefined) {
+  //     cosnole.log(" ZDATA NOT UND ")
+  //     if (Object.values(zpdata) !== null) {
+  //       cosnole.log(" ZDATA NOT NULL ")
+  //       let res = Object.values(zpdata);
+  //       let zpp = res[0];
+  //       this.setState({
+  //         currentzpp: zpp
+  //       });
+  //       cosnole.log(" TRY GET DATA FB ")
+  //       await firebase
+  //         .database()
+  //         .ref(
+  //           "/Countries/" + this.state.currentcp + "/points/" + zpp + "/points/"
+  //         )
+  //         .once("value", data => {
+            
+  //           if (data.exists()) {
+  //             cosnole.log(" DATA")
+  //             var zpv = Object.values(data.val());
+
+  //             if (zpv !== null) {
+  //               this.setState({
+  //                 zpdata: zpv,
+  //                 curentltlng: zpv.length 
+  //               });
+  //             }
+  //           } else {
+  //             this.setState({
+  //               zpata: null
+  //             });
+  //           }
+  //         });
+  //     } else {
+  //       this.setState({
+  //         zpata: null
+  //       });
+  //     }
+  //   } else {
+  //     await firebase
+  //       .database()
+  //       .ref("/Countries/" + this.state.currentcp + "/points/")
+  //       .once("value", data => {
+  //         if (data.exists()) {
+  //           var zpv = Object.values(data.val());
+
+  //           this.setState({
+             
+  //             currentzpp: zpv.length
+  //           });
+
+  //           console.log(zpv.length);
+  //         } else {
+  //           this.setState({
+  //             currentzpp: 0
+  //           });
+  //         }
+  //       });
+  //   }
+
+  //   YellowBox.ignoreWarnings(["Setting a timer"]);
+  //   const _console = _.clone(console);
+  //   console.warn = message => {
+  //     if (message.indexOf("Setting a timer") <= -1) {
+  //       _console.warn(message);
+  //     }
+  //   };
+  // };
+
+  // silencesetLtLng = async () => {
+  //   let ltlngname = this.state.ZPName;
+  //   let zpd = this.state.zpdata;
+  //   let ltlng = zpd.find(el1 => el1.name === ltlngname);
+  //   if (ltlng !== null) {
+  //     let res = Object.values(ltlng);
+  //     let zpp = res[1];
+  //     this.setState({
+  //       curentltlng: zpp
+  //     });
+  //     await firebase
+  //       .database()
+  //       .ref(
+  //         "/Countries/" +
+  //           this.state.currentcp +
+  //           "/points/" +
+  //           this.state.currentzpp +
+  //           "/points/" +
+  //           zpp
+  //       )
+  //       .once("value", data => {
+  //         if (data.exists()) {
+  //           var ltpv = Object.values(data.val());
+  //           var lt = ltpv[0].lat;
+  //           var lng = ltpv[0].long;
+  //           this.setState({
+  //             ltlng: ltpv,
+  //             ZPName: ltpv[2],
+  //             Lat: lt.toString(),
+  //             Long: lng.toString()
+  //           });
+  //         } else {
+  //           console.log(" DATA  UND ");
+  //           this.setState({
+  //             ltlng: null
+  //           });
+  //         }
+  //       });
+  //   }
+  // };
